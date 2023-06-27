@@ -23,9 +23,26 @@
 
 			$(document).ready(function() {
 
-				
+				$("#target1").css("color", "red");
+				$("#target1").prop("disabled", true);
+				$("#target4").remove()
 
+				$("#target2").clone().appendTo("#right-well");
+
+				$("#target1").parent().css("background-color", "red");
+				$("#right-well").children().css("color", "orange");
+
+				$(".target:nth-child(2)").addClass("animate__animated animate__bounce")
+				$(".target:even").addClass("animate__animated animate__shakeX")
+				
 			});
+
+			// Below is a slight modification to the last challenge just for fun
+
+			function selfDestruct() {
+				$("body").addClass("animate__animated animate__hinge")
+			}
+
 
 		</script>
 
@@ -64,6 +81,12 @@
 					</div>
 
 				</div>
+				
+				<!-- Just a fun little idea based off the last jQuery challenge on FreeCodeCamp -->
+
+				<div class="text-center"><button class="btn btn-default destruct btn-danger" onclick="selfDestruct()">
+					<i class="fas fa-trash"></i> Self Destruct
+				</button></div>
 
 			</div>
 
